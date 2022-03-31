@@ -1,0 +1,7 @@
+{
+    "name": "EquipmentKeeper",
+    "description": "A small mod that prevents equipment from being damaged",
+    "version_number": "1.0.0",
+    "dependencies": [],
+    "website_url": "https://github.com/purringInsanity/EquipmentKeeper.git"
+}
