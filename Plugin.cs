@@ -1,61 +1,80 @@
-﻿using BepInEx;
-using BepInEx.IL2CPP;
+﻿using System.Reflection;
+using BepInEx;
+using BepInEx.Unity.IL2CPP;
+using BepInEx.Logging;
 using HarmonyLib;
+
+
+
 
 namespace EquipmentKeeper
 {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(GUID, NAME, VERSION)]
     public class Plugin : BasePlugin
     {
+
+        public const string GUID = "org.voidsnow.plugin.EquipmentKeeper";
+        public const string NAME = "Equipment Keeper";
+        public const string VERSION = "1.0.2";
+
+        internal static new ManualLogSource Log;
+        internal static Harmony harmony;
         public override void Load()
         {
-            var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+
+            Log = base.Log;
+
+            harmony = new Harmony(GUID);
             harmony.PatchAll();
-            Log.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+
+
+            Log.LogInfo($"Plugin {NAME} is loaded!");
         }
     }
 }
 
+
+
 [HarmonyPatch(typeof(PlayerController))]
-    internal class PlayerControllerPatch
+internal class PlayerControllerPatch
+{
+    [HarmonyPatch("ReduceDurabilityOfHeldEquipment")]
+    [HarmonyPrefix]
+    static void ReduceDurabilityOfHeldEquipmentPatch(ref bool __runOriginal)
     {
-        [HarmonyPatch("ReduceDurabilityOfHeldEquipment")]
-        [HarmonyPrefix]
-        static void ReduceDurabilityOfHeldEquipmentPatch(ref bool __runOriginal)
-        {
-            __runOriginal = false;
-            return;
-        }
-
-        [HarmonyPatch("ReduceDurabilityOfAllEquipment")]
-        [HarmonyPrefix]
-        static void ReduceDurabilityOfAllEquipmentPatch(ref bool __runOriginal)
-        {
-            __runOriginal = false;
-            return;
-        }
-
-        [HarmonyPatch("ReduceDurabilityOfEquipment")]
-        [HarmonyPrefix]
-        static void ReduceDurabilityOfEquipmentPatch(ref bool __runOriginal)
-        {
-            __runOriginal = false;
-            return;
-        }
-
-        [HarmonyPatch("ReducePercentageDurabilityOfEquipment")]
-        [HarmonyPrefix]
-        static void ReducePercentageDurabilityOfEquipmentPatch(ref bool __runOriginal)
-        {
-            __runOriginal = false;
-            return;
-        }
-
-        [HarmonyPatch("ReducePercentageDurabilityOfAllEquipment")]
-        [HarmonyPrefix]
-        static void ReducePercentageDurabilityOfAllEquipmentPatch(ref bool __runOriginal)
-        {
-            __runOriginal = false;
-            return;
-        }
+        __runOriginal = false;
+        return;
     }
+
+    [HarmonyPatch("ReduceDurabilityOfAllEquipment")]
+    [HarmonyPrefix]
+    static void ReduceDurabilityOfAllEquipmentPatch(ref bool __runOriginal)
+    {
+        __runOriginal = false;
+        return;
+    }
+
+    [HarmonyPatch("ReduceDurabilityOfEquipment")]
+    [HarmonyPrefix]
+    static void ReduceDurabilityOfEquipmentPatch(ref bool __runOriginal)
+    {
+        __runOriginal = false;
+        return;
+    }
+
+    [HarmonyPatch("ReducePercentageDurabilityOfEquipment")]
+    [HarmonyPrefix]
+    static void ReducePercentageDurabilityOfEquipmentPatch(ref bool __runOriginal)
+    {
+        __runOriginal = false;
+        return;
+    }
+
+    [HarmonyPatch("ReducePercentageDurabilityOfAllEquipment")]
+    [HarmonyPrefix]
+    static void ReducePercentageDurabilityOfAllEquipmentPatch(ref bool __runOriginal)
+    {
+        __runOriginal = false;
+        return;
+    }
+}
