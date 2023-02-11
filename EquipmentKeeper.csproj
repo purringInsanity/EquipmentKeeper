@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
-    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.662" />
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.665" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,9 +30,6 @@
     </Reference>
     <Reference Include="DomainReloadHelper.Runtime">
       <HintPath>..\lib\DomainReloadHelper.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="DynamicText">
-      <HintPath>..\lib\DynamicText.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Steamworks.Win64">
       <HintPath>..\lib\Facepunch.Steamworks.Win64.dll</HintPath>
@@ -67,6 +64,9 @@
     <Reference Include="Il2CppSystem.Net.Http">
       <HintPath>..\lib\Il2CppSystem.Net.Http.dll</HintPath>
     </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>..\lib\Il2CppSystem.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="Il2CppSystem.Runtime.Serialization">
       <HintPath>..\lib\Il2CppSystem.Runtime.Serialization.dll</HintPath>
     </Reference>
@@ -75,6 +75,9 @@
     </Reference>
     <Reference Include="io.sentry.unity.runtime">
       <HintPath>..\lib\io.sentry.unity.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="NaughtyAttributes.Core">
+      <HintPath>..\lib\NaughtyAttributes.Core.dll</HintPath>
     </Reference>
     <Reference Include="Pug.Base">
       <HintPath>..\lib\Pug.Base.dll</HintPath>
@@ -96,6 +99,9 @@
     </Reference>
     <Reference Include="Pug.UnityExtensions">
       <HintPath>..\lib\Pug.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PugRP">
+      <HintPath>..\lib\PugRP.dll</HintPath>
     </Reference>
     <Reference Include="PugWorldGen">
       <HintPath>..\lib\PugWorldGen.dll</HintPath>
@@ -126,6 +132,9 @@
     </Reference>
     <Reference Include="Rewired_Windows">
       <HintPath>..\lib\Rewired_Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows_Functions">
+      <HintPath>..\lib\Rewired_Windows_Functions.dll</HintPath>
     </Reference>
     <Reference Include="Sentry">
       <HintPath>..\lib\Sentry.dll</HintPath>
@@ -216,6 +225,12 @@
     </Reference>
     <Reference Include="Unity.Properties">
       <HintPath>..\lib\Unity.Properties.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\lib\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\lib\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes">
       <HintPath>..\lib\Unity.Scenes.dll</HintPath>
@@ -349,8 +364,11 @@
     <Reference Include="UnityEngine.TerrainPhysicsModule">
       <HintPath>..\lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>..\lib\UnityEngine.TextCoreModule.dll</HintPath>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>..\lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>..\lib\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\lib\UnityEngine.TextRenderingModule.dll</HintPath>
@@ -378,6 +396,9 @@
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
       <HintPath>..\lib\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>..\lib\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
       <HintPath>..\lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
@@ -429,6 +450,9 @@
     </Reference>
     <Reference Include="ZipSaveFolder">
       <HintPath>..\lib\ZipSaveFolder.dll</HintPath>
+    </Reference>
+    <Reference Include="__Generated">
+      <HintPath>..\lib\__Generated.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ namespace EquipmentKeeper
 
         public const string GUID = "org.voidsnow.plugin.EquipmentKeeper";
         public const string NAME = "Equipment Keeper";
-        public const string VERSION = "1.0.2";
+        public const string VERSION = "1.0.3";
 
         internal static new ManualLogSource Log;
         internal static Harmony harmony;

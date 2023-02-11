@@ -1,7 +1,7 @@
 {
     "name": "EquipmentKeeper",
     "description": "A small mod that prevents equipment from being damaged",
-    "version_number": "1.0.2",
-    "dependencies": ["BepInEx-BepInExPack_Core_Keeper-2.0.1"],
+    "version_number": "1.0.3",
+    "dependencies": ["BepInEx-BepInExPack_Core_Keeper-2.0.3"],
     "website_url": "https://github.com/purringInsanity/EquipmentKeeper.git"
 }
